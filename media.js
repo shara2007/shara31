@@ -1,15 +1,15 @@
-//criar referência ao from e elementos de resposta do programa
+//criar referência ao form e elementos de resposta do programa
 
-const from = document.querySelector("from")
+const form = document.querySelector("form")
 const resp1 = document.querySelector("h3")
 const resp2 = document.querySelector ("h4") 
 
 //cria um ouvinte
-from.addEventListener("submit",(e)=> {
-e.preventDefault() //evitar o envio do from 
+form.addEventListener("submit",(e)=> {
+e.preventDefault() //evitar o envio do form 
 const nome = from.inNome.value //obtém o nome 
-const nota = Number(from.inNote1.value) //obtém a primeira nota 
-const nota2 = Number(from.inNote2.value) //obtém a segunda nota 
+const nota = Number(form.inNote1.value) //obtém a primeira nota 
+const nota2 = Number(form.inNote2.value) //obtém a segunda nota 
 const media = (nota1+nota2)/2 // media de notas
 resp1.innerText = `media das notas ${ media.toFixed(2)}`
 //criar as condicionias
